@@ -43,6 +43,8 @@ Example training an AutoEncoder on Arrhythmia:
 python main.py --config=./config/_data.yaml --config=./config/_trainer.yaml --config=./config/autoencoder.yaml
 ```
 
+### Powershell utility script
+
 We also provide a [utility powershell script](./scripts/train.ps1) to automate training of multiple models on the same dataset. To launch it, simply run the following commands
 
 ```powershell
@@ -58,5 +60,19 @@ Example on Arrhythmia:
 ```powershell
 cd scripts
 conda activate pyad
-./train.ps1 C:\Users\me\path\to\pyad\config _data.yaml _trainer.yaml
+./train.ps1 C:\Users\me\path\to\pyad\config\arrhythmia _data.yaml _trainer.yaml
+```
+
+### Neptune logger
+
+Optionally, you can log your experiments using Neptune. To do so, add a `logger` key in the `init_args` of the trainer and define `NEPTUNE_API_TOKEN` and `NEPTUNE_PROJECT` as environment variables.
+
+```yaml
+# _trainer.yaml
+trainer:
+  class_path: pyad.models.trainer.ModuleTrainer
+  init_args:
+    ...params
+    logger:
+      class_path: pyad.loggers.NeptuneLogger
 ```
