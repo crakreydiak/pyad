@@ -1,10 +1,14 @@
 import os
+import sys
 from collections import defaultdict
 import pandas as pd
 import numpy as np
 import warnings
 from typing import Tuple, Any
 from scipy.io import loadmat
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from data.process_ids2017 import parse_args, save_stats
 
