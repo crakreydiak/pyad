@@ -22,3 +22,8 @@ models/**/*.pt
 models/**/*.npy
 models/**/*.sav
 scripts/tex-utilities/output/**/*.tex
+
+# Database files
+data/**/*.csv
+data/**/*.npy
+data/**/*.mat
