@@ -27,6 +27,12 @@ Using conda:
 conda env create -f environment.yaml
 ```
 
+Using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Reproduce experiments
 
 The experiments are defined in YAML configuration files under [config](./config). Simply upload your data in the [data](./data) folder and use the preprocessing scripts to clean them or simply change the variables in `_data.yaml` to use a different path. Configurations are split in three different files: data, trainer and the model.
