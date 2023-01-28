@@ -1,0 +1,19 @@
+name: pyad
+channels:
+  - conda-forge
+  - nvidia
+  - pytorch
+dependencies:
+  - python=3.8
+  - pytorch
+  - pytorch-cuda=11.6
+  - torchvision
+  - torchaudio
+  - conda-forge::neptune-client
+  - pip
+  - pip:
+    - numpy
+    - matplotlib
+    - pytorch-lightning
+    - scikit-learn=^1.2.1
+    - tqdm
