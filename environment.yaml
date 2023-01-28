@@ -15,4 +15,6 @@ dependencies:
     - pytorch-lightning
     - scikit-learn~=1.2.1
     - tqdm
+    - scipy
     - pandas
+    - jsonargparse
