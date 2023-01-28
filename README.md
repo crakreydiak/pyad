@@ -57,6 +57,6 @@ Example on Arrhythmia:
 
 ```powershell
 cd scripts
-conda activate my-env
+conda activate pyad
 ./train.ps1 C:\Users\me\path\to\pyad\config _data.yaml _trainer.yaml
 ```

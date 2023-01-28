@@ -1,19 +1,18 @@
-name: pyad
+name: pyad-2
 channels:
   - conda-forge
   - nvidia
   - pytorch
 dependencies:
   - python=3.8
-  - pytorch
+  - pytorch=1.13
   - pytorch-cuda=11.6
-  - torchvision
-  - torchaudio
   - conda-forge::neptune-client
   - pip
   - pip:
     - numpy
     - matplotlib
     - pytorch-lightning
-    - scikit-learn=^1.2.1
+    - scikit-learn~=^1.2.1
     - tqdm
+    - pandas
